@@ -1,0 +1,25 @@
+class Movie:
+    def __init__(self, title, hero, heroine):
+        self.title = title
+        self.hero = hero
+        self.heroine = heroine
+    def info(self):
+        print("Movie name:", self.title)
+        print("Hero Name:", self.hero)
+        print("Heroine Name:", self.heroine)
+list_of_Movies = []
+while True:
+    title = input("Enter Movie Name: ")
+    hero = input("Hero Name: ")
+    heroine = input("Heroine Name: ")
+    m = Movie(title, hero, heroine)
+    list_of_Movies.append(m)
+    print("Movie added to the list successfully")
+    option = input("Do you want to add one more movie? [yes/no]: ")
+    if option.lower() == 'no':
+        break
+print("All movie information")
+print("#" * 40)
+for movie in list_of_Movies:
+    movie.info()
+    print()
