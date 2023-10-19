@@ -1,0 +1,33 @@
+1.Constructor is Special Method.
+2.The name os the constructor is always __init__
+3.We are not required to call constructor explicitly. It will executed automatically when we are creating an object.
+
+        class Test:
+            def __init__(self):
+                print("Constructor execution")
+        t1=Test() #Output: Constructor execution
+4.Per object constructor will be executed only oncee.
+5.Tha main purpose of constructor is to declare and intialize instance varianles. __init__
+6.Constructor take at least one argument(self)
+7.With in the python class constructor is optional.If we are not providing constructor default constructor will provided by PVM.
+
+        class Test1:
+            def m1(self):
+                print("Method Execution")
+        t=Test1()
+        t.m1() #Output::Method Execution
+8.we can call constructor explicitly then it will executed just like a normal method and new object won't be craeted
+        class Test2:
+            def __init__(self):
+                print("Constructor Execution")
+        t = Test2()
+        t.__init__() #output :: Constructor Execution
+
+9.Constructor/method overloading not possible in python if we trying to declare multiple constructore,PVM will always consider only last constructor.
+class Test3:
+            def __init__(self):
+                print("No - org constructor")
+            def __init__(self,x):
+                print("one-org constructor")
+        t = Test3(12)
+        t=Test3(10)
