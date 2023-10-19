@@ -1,1 +1,30 @@
+Class:
+=====
+Class is a blueprint or template for object
+Object:
+======
+A physical existance of class
 
+Class define:
+============
+class name_of_class:
+	'''doc string'''
+	properties(variables)
+	actions(Methos)
+
+
+class Person:
+    def __init__(self):
+        self.name = "Ashok"
+        self.age = 25
+    
+    def say_hello(self):
+        print("My name:",self.name)
+        print("My age:",self.age)
+A=Person()
+print(A.name)
+print(A.age)
+
+
+-->Here A is reference varibale 
+-->Person() is object
