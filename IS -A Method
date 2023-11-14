@@ -1,0 +1,58 @@
+By using Composition(IS - A) Relationship:
+=========================================
+In Python, the IS-A relationship is a way of representing inheritance between classes. It is also known as a class inheritance relationship. 
+The IS-A relationship is used to create a new class that is a modified version of an existing class.
+
+
+
+EX:
+==
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def eat(self):
+        print("The animal is eating.")
+
+class Dog(Animal):
+    def bark(self):
+        print("The dog is barking.")
+
+class Cat(Animal):
+    def meow(self):
+        print("The cat is meowing.")
+
+#a = Animal("Dog",21)
+#a.eat()
+
+d = Dog("Dog",21)
+d.bark()
+
+EX:
+==
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    def eat_drink(self):
+        print("Eat Birytani and drink water")
+        
+class Emp(Person):
+    def __init__(self,name,age,eno,esal):
+        super().__init__(name,age)
+        self.eno = eno
+        self.esal = esal
+    def work(self):
+        print("Coding python")
+    
+    def EmpInfo(self):
+        print("Emp Name:",self.name)
+        print("Emp age:",self.age)
+        print("Emp Number:",self.eno)
+        print("Emp Sal:",self.esal)
+        
+e = Emp("Ashok",23,"E1262",12000)
+e.EmpInfo()
+e.work()
+e.eat_drink()
