@@ -1,0 +1,87 @@
+By using Composition(HAS - A) Relationship
+Composition is a way of creating complex objects in Python by combining objects Together It involves creating a new object that has one or more other objects as its attribute.
+
+
+EX1:
+==
+class Engine:
+    def UseEngine(self):
+        print("Engine spefific Functinality")
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()
+        
+    def UseCar(self):
+        print("Car Required Engine Functionality")
+        self.engine.UseEngine()
+        
+c = Car()
+c.UseCar()
+
+EX2:
+===
+class Engine:
+    def start(self):
+        print("Engine started.")
+
+class Wheels:
+    def rotate(self):
+        print("Wheels rotating.")
+
+class Transmission:
+    def shift_gear(self):
+        print("Gear shifted.")
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()
+        self.wheels = Wheels()
+        self.transmission = Transmission()
+
+    def start(self):
+        self.engine.start()
+        self.transmission.shift_gear()
+        self.wheels.rotate()
+        print("Car started.")
+
+c =  Car()
+c.start()
+
+#output
+Engine started.
+Gear shifted.
+Wheels rotating.
+Car started.
+
+EX3:
+===
+class SportsNews:
+    def getSportsNews(self):
+        print("SportsNews")
+
+class MoviesNews:
+    def getMoviesNews(self):
+        print("MoviesNews")
+        
+class PloticalNews:
+    def getPloticalNews(self):
+        print("PloticalNews")
+        
+class TvNews:
+    def __init__(self):
+        self.SportsNews = SportsNews()
+        self.MoviesNews = MoviesNews()
+        self.PloticalNews = PloticalNews()
+    
+    def Getnews(self):
+        self.SportsNews.getSportsNews()
+        self.MoviesNews.getMoviesNews()
+        self.PloticalNews.getPloticalNews()
+        
+n = TvNews()
+n.Getnews()
+
+
+
+
